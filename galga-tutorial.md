@@ -328,3 +328,85 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
+## {Schrit 10}
+
+Verwende ein weiteres Ereignis, um Code auszuführen, wenn sich ein ``||sprites:Spieler(Player)-Sprite||`` mit einem ``||sprites:Gegnerischen(Enemy)-Sprite||`` überschneidet.
+
+```typescript
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+})
+```
+
+## {Schrit 11}
+
+Füge Code hinzu, um ``||variables(noclick):otherSprite||``, das gegnerische Sprite, zu ``||sprites:zerstören||``.
+
+```typescript
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    // @highlight
+    otherSprite.destroy()
+})
+```
+
+## {Schrit 12}
+
+Füge in diesem Fall Code hinzu, um ``||info:ein Leben zu entfernen||`` (oder ändere es durch "-1").
+
+```typescript
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    // @highlight
+    info.changeLifeBy(-1)
+})
+```
+
+## {Schrit 13}
+
+Füge ein Ereignis ein, um Code auszuführen, wenn sich ein ``||sprites:Projectile-Sprite||`` mit einem ``||sprites:Gegnerischen(Enemy)-Sprite||`` überschneidet.
+
+```typescript
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+})
+```
+
+## {Schrit 14}
+
+Füge Code hinzu, um ``||variables(noclick):otherSprite||``, das gegnerische Sprite, zu ``||sprites:zerstören||``.
+
+```typescript
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    // @highlight
+    otherSprite.destroy()
+})
+```
+
+## {Schrit 15}
+
+Füge Code ein, um das Sprite, das ``||variables(noclick):Projektil-Sprite||``, zu ``||sprites:zerstören||``, mit ``||sprites:Feuereffekt||``.
+
+```typescript
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    // @highlight
+    sprite.destroy(effects.fire, 100)
+})
+```
+
+## {Schrit 16}
+
+Füge Code hinzu, um die ``||info:Punktzahl um 1 zu ändern||``.
+
+```typescript
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    sprite.destroy(effects.fire, 100)
+    // @highlight
+    info.changeScoreBy(1)
+})
+```
+
+## {Complete @fullscreen}
+
+Herzlichen Glückwunsch, du hast das Spiel abgeschlossen! Verwende die Richtungstasten, um das Raumschiff zu bewegen und den Gegnern auszuweichen. Benutze die Taste **A/Leertaste**, um Raketen auf die Gegner zu schiessen.
+
+![Space plane and attacking spacecraft](/static/tutorials/galga.gif)

@@ -1,4 +1,6 @@
-## {Einführung @unplugged}
+# Galga
+
+## {Einführung @showdialog}
 
 Fliege dein Raumschiff durch die entgegenkommenden feindlichen Raumschiffe. Kannst du den fortlaufenden Angriff überleben? Du startest mit drei Leben, aber du sammelst Punkte, indem du auf die feindlichen Schiffe schießt. Du verlierst ein Leben bei jeder Kollision, also versuche die Feinde zu zerstören, bevor sie dich treffen.
 

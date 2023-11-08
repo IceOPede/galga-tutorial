@@ -6,7 +6,7 @@ Fliege dein Raumschiff durch die entgegenkommenden feindlichen Raumschiffe. Kann
 
 ![Space plane and attacking spacecraft](/static/tutorials/galga.gif)
 
-## {Schrit 1}
+## {Schritt 1}
 
 Füge Code hinzu, um ein ``||sprites:Sprite||`` zu erstellen, benenne es ``||variables(noclick):raumschiff||`` und zeichne ein Flugzeug oder eine Art von Flugobjekt.
 
@@ -49,7 +49,7 @@ let raumschiff = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## {Schrit 2}
+## {Schritt 2}
 
 Stelle sicher, dass das ``||variables(noclick):raumschiff||`` ``||sprites:im dem Bildschirm bleibt||``.
 
@@ -92,7 +92,7 @@ let raumschiff = sprites.create(img`
 raumschiff.setStayInScreen(true)
 ```
 
-## {Schrit 3}
+## {Schritt 3}
 
 Starte das Spiel mit einigen Leben, also stelle die ``||info:Anzahl der Leben||`` auf ``3`` ein.
 
@@ -136,7 +136,7 @@ raumschiff.setStayInScreen(true)
 info.setLife(3)
 ```
 
-## {Schrit 4}
+## {Schritt 4}
 
 ``||controller:Bewege||`` nun das ``||variables(noclick):Raumschiff||`` mit den ``||controller:Steuerungstasten||`` und ändere die Empfindlichkeit von ``vx`` und ``vy`` auf ``200``.
 
@@ -181,9 +181,9 @@ info.setLife(3)
 controller.moveSprite(raumschiff, 200, 200)
 ```
 
-## {Schrit 5}
+## {Schritt 5}
 
-Füge ein Ereignis hinzu, um Code auszuführen, wenn ``||controller:Taste A gedrückt||`` wird. Erstelle in diesem Fall ein ``||sprites:Projektil-Sprite||`` namens Rakete, das ``||sprites:vom||`` ``||variables(noclick):raumschiff||`` aus gestartet wird, und legen Sie die Empfindlichkeit ``vx`` auf ``200`` festund ``vy`` auf ``0``.
+Füge ein Ereignis hinzu, um Code auszuführen, wenn ``||controller:Taste A gedrückt||`` wird. Erstelle in diesem Fall ein ``||sprites:Projektil-Sprite||`` namens Rakete, dass ``||sprites:vom||`` ``||variables(noclick):raumschiff||`` aus gestartet wird, lege die Empfindlichkeit ``vx`` auf ``200`` fest und ``vy`` auf ``0``.
 
 ```typescript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -208,9 +208,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## {Schrit 6}
+## {Schritt 6}
 
-Füge ein weiteres Ereignis hinzu, um jede ``||game:halbe Sekunde Code beim Spielupdate||`` auszuführen. Erstelle in diesem Fall ein ``||sprites:Sprite||`` des typen ``||sprites:Enemy||``(gegner), benenne es gegner,und zeichne das feindliche Flugzeug hinein.
+Füge ein weiteres Ereignis hinzu, um jede ``||game:halbe Sekunde Code beim Spielupdate||`` auszuführen. Erstelle in diesem Fall ein ``||sprites:Sprite||`` des typen ``||sprites:Enemy||``(Gegner), benenne es gegner und zeichne das feindliche Flugzeug hinein.
 
 ```typescript
 game.onUpdateInterval(500, function () {
@@ -235,7 +235,7 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
-## {Schrit 7}
+## {Schritt 7}
 
 Stelle beim ``||variables(noclick):gegnerischen Sprite||`` die ``||sprites:Geschwindigkeit||`` mit einem Werten ein, damit es **horizontal** von **rechts nach links** fliegt.
 
@@ -264,7 +264,7 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
-## {Schrit 8}
+## {Schritt 8}
 
 Füge Code hinzu, um ``||sprites:links||`` vom ``||variables(noclick):Gegner||` auf die ``||scene:Bildschirmbreite||`` und ``||sprites:y||`` auf eine ``||math:Zufallszahl||`` zwischen 0 und ``||scene:Bildschirmhöhe||`` festzulegen.
 
@@ -296,7 +296,7 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
-## {Schrit 9}
+## {Schritt 9}
 
 Um zu verhindern, dass die Anzahl der ``||sprites:gegnerischen Sprites||` zunimmt, obwohl sie den Bildschirm verlassen, stelle die Flagge für die ``||sprites:automatische Zerstörung||`` des ``||variables(noclick):Gegners||`` auf **EIN**.
 
@@ -328,7 +328,7 @@ game.onUpdateInterval(500, function () {
 })
 ```
 
-## {Schrit 10}
+## {Schritt 10}
 
 Verwende ein weiteres Ereignis, um Code auszuführen, wenn sich ein ``||sprites:Spieler(Player)-Sprite||`` mit einem ``||sprites:Gegnerischen(Enemy)-Sprite||`` überschneidet.
 
@@ -337,7 +337,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 ```
 
-## {Schrit 11}
+## {Schritt 11}
 
 Füge Code hinzu, um ``||variables(noclick):otherSprite||``, das gegnerische Sprite, zu ``||sprites:zerstören||``.
 
@@ -348,7 +348,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 ```
 
-## {Schrit 12}
+## {Schritt 12}
 
 Füge in diesem Fall Code hinzu, um ``||info:ein Leben zu entfernen||`` (oder ändere es durch "-1").
 
@@ -360,7 +360,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 ```
 
-## {Schrit 13}
+## {Schritt 13}
 
 Füge ein Ereignis ein, um Code auszuführen, wenn sich ein ``||sprites:Projectile-Sprite||`` mit einem ``||sprites:Gegnerischen(Enemy)-Sprite||`` überschneidet.
 
@@ -369,7 +369,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 })
 ```
 
-## {Schrit 14}
+## {Schritt 14}
 
 Füge Code hinzu, um ``||variables(noclick):otherSprite||``, das gegnerische Sprite, zu ``||sprites:zerstören||``.
 
@@ -380,7 +380,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 })
 ```
 
-## {Schrit 15}
+## {Schritt 15}
 
 Füge Code ein, um das Sprite, das ``||variables(noclick):Projektil-Sprite||``, zu ``||sprites:zerstören||``, mit ``||sprites:Feuereffekt||``.
 
@@ -392,7 +392,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 })
 ```
 
-## {Schrit 16}
+## {Schritt 16}
 
 Füge Code hinzu, um die ``||info:Punktzahl um 1 zu ändern||``.
 

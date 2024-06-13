@@ -266,7 +266,7 @@ game.onUpdateInterval(500, function () {
 
 ## {Schritt 8}
 
-Füge Code hinzu, um ``||sprites:links||`` vom ``||variables(noclick):Gegner||` auf die ``||scene:Bildschirmbreite||`` und ``||sprites:y||`` auf eine ``||math:Zufallszahl||`` zwischen 0 und ``||scene:Bildschirmhöhe||`` festzulegen.
+Füge Code hinzu, um ``||sprites:links||`` vom ``||variables(noclick):Gegner||`` auf die ``||scene:Bildschirmbreite||`` und ``||sprites:y||`` auf eine ``||math:Zufallszahl||`` zwischen 0 und ``||scene:Bildschirmhöhe||`` festzulegen.
 
 ```typescript
 game.onUpdateInterval(500, function () {
@@ -298,7 +298,7 @@ game.onUpdateInterval(500, function () {
 
 ## {Schritt 9}
 
-Um zu verhindern, dass die Anzahl der ``||sprites:gegnerischen Sprites||` zunimmt, obwohl sie den Bildschirm verlassen, stelle die Flagge für die ``||sprites:automatische Zerstörung||`` des ``||variables(noclick):Gegners||`` auf **EIN**.
+Um zu verhindern, dass die Anzahl der ``||sprites:gegnerischen Sprites||`` zunimmt, obwohl sie den Bildschirm verlassen, stelle die Flagge für die ``||sprites:automatische Zerstörung||`` des ``||variables(noclick):Gegners||`` auf **EIN**.
 
 ```typescript
 game.onUpdateInterval(500, function () {

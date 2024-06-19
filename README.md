@@ -1,6 +1,7 @@
 Links:
 
 https://arcade.makecode.com/#tutorial:github:iceopede/arcade-pizza-tutorial/fange-die-pizza-tutorial
+
 https://arcade.makecode.com/#tutorial:github:iceopede/galga-tutorial/galga-tutorial
 
 

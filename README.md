@@ -1,4 +1,8 @@
- 
+Links:
+
+https://arcade.makecode.com/#tutorial:github:iceopede/arcade-pizza-tutorial/fange-die-pizza-tutorial
+https://arcade.makecode.com/#tutorial:github:iceopede/galga-tutorial/galga-tutorial
+
 
 
 > Diese Seite bei [https://iceopede.github.io/galga-tutorial/](https://iceopede.github.io/galga-tutorial/) öffnen
